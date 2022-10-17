@@ -28,7 +28,8 @@ namespace TravelCup.Models
                         Shape = "Circle",
                         Colour = "Red",
                         Size = "Small",
-                        Price = 1200.10M
+                        Price = 1200.10M,
+                        Rating = 1.5M
                     },
 
                    new TravelCupClass
@@ -38,7 +39,8 @@ namespace TravelCup.Models
                        Shape = "Circle",
                        Colour = "Red",
                        Size = "Small",
-                       Price = 1200.10M
+                       Price = 1200.10M,
+                       Rating = 1.2M
                    },
 
                    new TravelCupClass
@@ -48,7 +50,8 @@ namespace TravelCup.Models
                        Shape = "Circle",
                        Colour = "Red",
                        Size = "Small",
-                       Price = 1200.10M
+                       Price = 1200.10M,
+                       Rating = 1.9M
                    },
 
                     new TravelCupClass
@@ -58,7 +61,8 @@ namespace TravelCup.Models
                         Shape = "Circle",
                         Colour = "Red",
                         Size = "Small",
-                        Price = 1200.10M
+                        Price = 1200.10M,
+                        Rating = 2.9M
                     },
                      new TravelCupClass
                      {
@@ -67,7 +71,8 @@ namespace TravelCup.Models
                          Shape = "Circle",
                          Colour = "Red",
                          Size = "Small",
-                         Price = 1200.10M
+                         Price = 1200.10M,
+                         Rating = 2.6M
                      },
                       new TravelCupClass
                       {
@@ -76,7 +81,8 @@ namespace TravelCup.Models
                           Shape = "Circle",
                           Colour = "Red",
                           Size = "Small",
-                          Price = 1200.10M
+                          Price = 1200.10M,
+                          Rating = 6.6M
                       },
                        new TravelCupClass
                        {
@@ -85,7 +91,8 @@ namespace TravelCup.Models
                            Shape = "Circle",
                            Colour = "Red",
                            Size = "Small",
-                           Price = 1200.10M
+                           Price = 1200.10M,
+                           Rating = 4.2M
                        },
                         new TravelCupClass
                         {
@@ -94,7 +101,8 @@ namespace TravelCup.Models
                             Shape = "Circle",
                             Colour = "Red",
                             Size = "Small",
-                            Price = 1200.10M
+                            Price = 1200.10M,
+                            Rating = 9.2M
                         },
                          new TravelCupClass
                          {
@@ -103,7 +111,8 @@ namespace TravelCup.Models
                              Shape = "Circle",
                              Colour = "Red",
                              Size = "Small",
-                             Price = 1200.10M
+                             Price = 1200.10M,
+                             Rating = 8.2M
                          },
                           new TravelCupClass
                           {
@@ -112,7 +121,8 @@ namespace TravelCup.Models
                               Shape = "Circle",
                               Colour = "Red",
                               Size = "Small",
-                              Price = 1200.10M
+                              Price = 1200.10M,
+                              Rating = 6.8M
                           }
                 );
                 context.SaveChanges();

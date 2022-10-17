@@ -80,7 +80,7 @@ namespace TravelCup.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,CupsTitle,ManufactureDate,Shape,Colour,Size,Price")] TravelCupClass travelCupClass)
+        public async Task<IActionResult> Create([Bind("Id,CupsTitle,ManufactureDate,Shape,Colour,Size,Price,Rating")] TravelCupClass travelCupClass)
         {
             if (ModelState.IsValid)
             {
@@ -112,7 +112,7 @@ namespace TravelCup.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,CupsTitle,ManufactureDate,Shape,Colour,Size,Price")] TravelCupClass travelCupClass)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,CupsTitle,ManufactureDate,Shape,Colour,Size,Price,Rating")] TravelCupClass travelCupClass)
         {
             if (id != travelCupClass.Id)
             {
