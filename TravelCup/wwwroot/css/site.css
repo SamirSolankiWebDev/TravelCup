@@ -66,6 +66,10 @@ html {
   min-height: 100%;
 }
 
+img{
+    width:60%;
+    height:60%;
+}
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
