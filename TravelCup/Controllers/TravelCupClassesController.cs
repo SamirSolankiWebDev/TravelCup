@@ -20,15 +20,34 @@ namespace TravelCup.Controllers
         }
 
         // GET: TravelCupClasses
-        public async Task<IActionResult> Index(string searchString)
+        public async Task<IActionResult> Index(string RechangeSize, string searchString)
         {
+            // Use LINQ to get list of genres.
+            IQueryable<string> genreQuery = from m in _context.TravelCupClass
+                                            orderby m.Size
+                                            select m.Size;
+
             var cup = from m in _context.TravelCupClass
                          select m;
             if (!String.IsNullOrEmpty(searchString))
             {
                 cup = cup.Where(s => s.CupsTitle.Contains(searchString));
             }
-            return View(await cup.ToListAsync());
+
+            if (!string.IsNullOrEmpty(RechangeSize))
+            {
+                cup = cup.Where(x => x.Size == RechangeSize);
+            }
+
+            var cupReshapeSizeVM = new TravelCupShapeViewModel
+            {
+                RechangeSize = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                Cups = await cup.ToListAsync()
+            };
+
+            return View(cupReshapeSizeVM);
+
+
 
         }
 
