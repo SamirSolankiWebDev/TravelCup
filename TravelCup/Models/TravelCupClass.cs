@@ -15,12 +15,18 @@ namespace TravelCup.Models
         [Display(Name = "ManufactureDate")]
         [DataType(DataType.Date)]
         public DateTime ManufactureDate { get; set; }
+        [StringLength(60, MinimumLength = 3)]
         public string Shape { get; set; }
         public string Colour { get; set; }
         public string Size { get; set; }
 
+
+        [Range(1, 100)]
+        [DataType(DataType.Currency)]
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Price { get; set; }
+
+        [Column(TypeName = "decimal(18, 2)")]
         public decimal Rating { get; set; }
 
     }
