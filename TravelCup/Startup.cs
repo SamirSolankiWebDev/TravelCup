@@ -31,7 +31,7 @@ namespace TravelCup
                 options.UseSqlServer(
                     Configuration.GetConnectionString("MvcTravelCupContext")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+                .AddEntityFrameworkStores<MvcTravelCupContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
