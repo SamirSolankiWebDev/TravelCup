@@ -73,7 +73,9 @@ img{
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
-    background-color: antiquewhite;
+    background: red;
+    background: -webkit-linear-gradient(to right, yellow, pink);
+    background: linear-gradient(to right, #16a085, #f4d03f);
     font-family: 'Kanit', sans-serif;
 }
 .footer {
