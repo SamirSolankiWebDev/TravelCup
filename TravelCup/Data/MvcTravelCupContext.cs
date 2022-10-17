@@ -14,6 +14,6 @@ namespace TravelCup.Data
         {
         }
 
-        public DbSet<TravelCup> TravelCup { get; set; }
+        public DbSet<TravelCupClass> TravelCupClass { get; set; }
     }
 }
