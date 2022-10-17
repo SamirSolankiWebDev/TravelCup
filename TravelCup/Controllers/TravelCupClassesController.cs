@@ -20,9 +20,16 @@ namespace TravelCup.Controllers
         }
 
         // GET: TravelCupClasses
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.TravelCupClass.ToListAsync());
+            var cup = from m in _context.TravelCupClass
+                         select m;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                cup = cup.Where(s => s.CupsTitle.Contains(searchString));
+            }
+            return View(await cup.ToListAsync());
+
         }
 
         // GET: TravelCupClasses/Details/5
