@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TravelCup.Models
 {
-    public class TravelCup
+    public class TravelCupClass
     {
         public int Id { get; set; }
         public string CupsTitle { get; set; }
